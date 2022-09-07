@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-import model.Perceptron;
+import model.PerceptronMLP;
 import model.Text;
 
 public class PerceptronRunner {
@@ -28,7 +28,7 @@ public class PerceptronRunner {
         int arrayTeta = dataBase.getOutputs().get(0).size();
         double ni = 0.3;
         int qtdNeuronioIntermediario = 8;
-        Perceptron neuronio = new Perceptron(entradasDoPerceptron, qtdNeuronioIntermediario, arrayTeta, ni);
+        PerceptronMLP neuronio = new PerceptronMLP(entradasDoPerceptron, qtdNeuronioIntermediario, arrayTeta, ni);
 
         double erroEpoca;
         double erroAmostra;
@@ -51,7 +51,7 @@ public class PerceptronRunner {
         //pesosFinal(neuronio);
     }
 
-    public static void pesosFinal(Perceptron perceptron) {
+    public static void pesosFinal(PerceptronMLP perceptron) {
         double[][] pesos = perceptron.getPesosSaida();
         int linha = 0;
         int coluna = 0;

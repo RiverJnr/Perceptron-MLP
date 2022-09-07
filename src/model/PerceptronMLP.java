@@ -2,14 +2,14 @@ package model;
 
 import java.util.Random;
 
-public class Perceptron {
+public class PerceptronMLP {
 
     private double ni;
     private double[][] pesosSaida;
     private double[][] pesosIntermediario;
     private int qtdNeuronioIntermediario;
 
-    public Perceptron(int qtdAmostra, int qtdNeuronioIntermediario, int arrayTeta, Double ni) {
+    public PerceptronMLP(int qtdAmostra, int qtdNeuronioIntermediario, int arrayTeta, Double ni) {
         this.ni = ni;
         this.qtdNeuronioIntermediario = qtdNeuronioIntermediario;
         this.pesosIntermediario = new double[qtdAmostra + 1][qtdNeuronioIntermediario];
